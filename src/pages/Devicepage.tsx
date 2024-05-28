@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./Devicepage.css";
+import { formatDate } from "../helpers/formatDate";
 
 function DevicePage() {
   // Would regularly use state management tool but handling state directly to get location for navigating back to previous page
@@ -56,11 +57,11 @@ function DevicePage() {
         </div>
         <div>
           <span>Next Report Time </span>
-          <p>{data.nextReportTime}</p>
+          <p>{formatDate(data.nextReportTime)}</p>
         </div>
         <div>
           <span>Last Report Time</span>
-          <p> {data.lastReportTime}</p>
+          <p>{formatDate(data.nextReportTime)}</p>
         </div>
       </div>
     </div>
