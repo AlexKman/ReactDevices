@@ -4,6 +4,7 @@ import "./Homepage.css";
 
 export default function Homepage() {
   const [dataArr, setData] = useState<any[]>([]);
+  const [headers, setHeaders] = useState<any[]>([]);
 
   useEffect(() => {
     axios
@@ -12,6 +13,7 @@ export default function Homepage() {
       )
       .then((response) => {
         setData(response.data.results);
+        setHeaders(Object.keys(response.data.results[0]));
       })
       .catch((error) => {
         console.log(error);
@@ -24,11 +26,9 @@ export default function Homepage() {
       <table className="homepage-table table">
         <thead>
           <tr>
-            <th>Header</th>
-            <th>Header</th>
-            <th>Header</th>
-            <th>Header</th>
-            <th>Header</th>
+            {headers.map((header) => (
+              <th scope="col">{header}</th>
+            ))}
           </tr>
         </thead>
         <tbody>
