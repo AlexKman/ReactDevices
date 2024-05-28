@@ -14,7 +14,6 @@ function DevicePage() {
         `https://pzv500llz9.execute-api.eu-west-2.amazonaws.com/production/device/${state.deviceId}`
       )
       .then((response) => {
-        console.log(response.data);
         setData(response.data);
       })
       .catch((error) => {
@@ -22,7 +21,11 @@ function DevicePage() {
       });
   }, []);
 
-  return <div className="device-page">Test device Page</div>;
+  return (
+    <div className="device-page">
+      <h1>Device Information for {state.deviceId}</h1>
+    </div>
+  );
 }
 
 export default DevicePage;
