@@ -10,8 +10,8 @@ export default function Homepage() {
 
   const navigate = useNavigate();
 
-  const goToDevicePage = () => {
-    navigate("/device");
+  const goToDevicePage = (deviceId: string) => {
+    navigate("/device", { state: { deviceId } });
   };
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function Homepage() {
         </thead>
         <tbody>
           {dataArr.map((data) => (
-            <tr className="table-row" onClick={() => goToDevicePage()}>
+            <tr className="table-row" onClick={() => goToDevicePage(data.id)}>
               <td>{data.id}</td>
               <td>{data.name ?? "Unknown"}</td>
               <td>{data.model?.name}</td>
