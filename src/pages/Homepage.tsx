@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Homepage.css";
 import { formatHeader } from "../helpers/formatHeader";
 import { useNavigate } from "react-router-dom";
+import { formatDate } from "../helpers/formatDate";
 
 export default function Homepage() {
   const [dataArr, setData] = useState<any[]>([]);
@@ -46,8 +47,8 @@ export default function Homepage() {
               <td>{data.id}</td>
               <td>{data.name ?? "Unknown"}</td>
               <td>{data.model?.name}</td>
-              <td>{data.lastReportTime}</td>
-              <td>{data.nextReportTime}</td>
+              <td>{formatDate(data.lastReportTime)}</td>
+              <td>{formatDate(data.nextReportTime)}</td>
             </tr>
           ))}
         </tbody>
