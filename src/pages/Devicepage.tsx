@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import "./Devicepage.css";
 
 function DevicePage() {
   // Would regularly use state management tool but handling state directly to get location for navigating back to previous page

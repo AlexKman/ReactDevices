@@ -1,0 +1,13 @@
+.device-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  gap: 3em;
+}
+
+.data-labels {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1em;
+}

@@ -21,6 +21,7 @@ export default function Homepage() {
       )
       .then((response) => {
         setData(response.data.results);
+        // Needs refactoring, shouldn't be modifying data like so and converting an object to an array
         setHeaders(Object.keys(response.data.results[0]));
       })
       .catch((error) => {
@@ -29,7 +30,7 @@ export default function Homepage() {
   }, []);
 
   return (
-    <div className="homepage ">
+    <div className="homepage">
       <h1 className="align-self-center">Devices</h1>
       <table className="homepage-table table">
         <thead>
