@@ -2,10 +2,17 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Homepage.css";
 import { formatHeader } from "../helpers/formatHeader";
+import { useNavigate } from "react-router-dom";
 
 export default function Homepage() {
   const [dataArr, setData] = useState<any[]>([]);
   const [headers, setHeaders] = useState<any[]>([]);
+
+  const navigate = useNavigate();
+
+  const goToDevicePage = () => {
+    navigate("/device");
+  };
 
   useEffect(() => {
     axios
@@ -34,7 +41,7 @@ export default function Homepage() {
         </thead>
         <tbody>
           {dataArr.map((data) => (
-            <tr className="table-row">
+            <tr className="table-row" onClick={() => goToDevicePage()}>
               <td>{data.id}</td>
               <td>{data.name ?? "Unknown"}</td>
               <td>{data.model?.name}</td>
