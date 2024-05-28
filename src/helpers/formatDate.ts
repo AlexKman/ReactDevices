@@ -1,4 +1,5 @@
 export function formatDate(date: string) {
-  console.log(date, "test date");
-  return date;
+  let parsedDate = new Date(Date.parse(date));
+
+  return parsedDate.toLocaleString();
 }
