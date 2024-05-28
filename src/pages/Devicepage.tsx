@@ -24,6 +24,44 @@ function DevicePage() {
   return (
     <div className="device-page">
       <h1>Device Information for {state.deviceId}</h1>
+      <div className="data-labels">
+        <div>
+          <span>Device ID </span>
+          <p>{data.id}</p>
+        </div>
+        <div>
+          <span>Name</span>
+          <p> {data.name ?? "Unknown"}</p>
+        </div>
+        <div>
+          <span>Model Name </span>
+          <p>{data.model?.name ?? "Unknown"}</p>
+        </div>
+        <div>
+          <span>Model Family</span>
+          <p> {data.model?.family ?? "Unknown"}</p>
+        </div>
+        <div>
+          <span>Model product </span>
+          <p>{data.model?.product ?? "Unknown"}</p>
+        </div>
+        <div>
+          <span>Owner Id </span>
+          <p>{data.owner?.id ?? "Unknown"}</p>
+        </div>
+        <div>
+          <span>Owner name </span>
+          <p>{data.owner?.name ?? "Unknown"}</p>
+        </div>
+        <div>
+          <span>Next Report Time </span>
+          <p>{data.nextReportTime}</p>
+        </div>
+        <div>
+          <span>Last Report Time</span>
+          <p> {data.lastReportTime}</p>
+        </div>
+      </div>
     </div>
   );
 }
