@@ -15,5 +15,9 @@ export default function Homepage() {
       });
   }, []);
 
-  return <div className="homepage">Test homepage</div>;
+  return (
+    <div className="homepage">
+      <h1>Devices</h1>
+    </div>
+  );
 }
