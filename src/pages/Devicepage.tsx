@@ -35,39 +35,39 @@ function DevicePage() {
       <h1>Device Information for {state.deviceId}</h1>
       <div className="data-labels">
         <div>
-          <span>Device ID</span>
+          <span className="font-weight-bold">Device ID</span>
           <p>{data.id}</p>
         </div>
         <div>
-          <span>Name</span>
+          <span className="font-weight-bold">Name</span>
           <p> {data.name ?? "Unknown"}</p>
         </div>
         <div>
-          <span>Model Name</span>
+          <span className="font-weight-bold">Model Name</span>
           <p>{data.model?.name ?? "Unknown"}</p>
         </div>
         <div>
-          <span>Model Family</span>
+          <span className="font-weight-bold">Model Family</span>
           <p> {data.model?.family ?? "Unknown"}</p>
         </div>
         <div>
-          <span>Model product</span>
+          <span className="font-weight-bold">Model product</span>
           <p>{data.model?.product ?? "Unknown"}</p>
         </div>
         <div>
-          <span>Owner Id</span>
+          <span className="font-weight-bold">Owner Id</span>
           <p>{data.owner?.id ?? "Unknown"}</p>
         </div>
         <div>
-          <span>Owner name</span>
+          <span className="font-weight-bold">Owner name</span>
           <p>{data.owner?.name ?? "Unknown"}</p>
         </div>
         <div>
-          <span>Next Report Time</span>
+          <span className="font-weight-bold">Next Report Time</span>
           <p>{formatDate(data.nextReportTime)}</p>
         </div>
         <div>
-          <span>Last Report Time</span>
+          <span className="font-weight-bold">Last Report Time</span>
           <p>{formatDate(data.nextReportTime)}</p>
         </div>
       </div>
