@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Homepage.css";
+import { formatHeader } from "../helpers/formatHeader";
 
 export default function Homepage() {
   const [dataArr, setData] = useState<any[]>([]);
@@ -27,7 +28,7 @@ export default function Homepage() {
         <thead>
           <tr>
             {headers.map((header) => (
-              <th scope="col">{header}</th>
+              <th scope="col">{formatHeader(header)}</th>
             ))}
           </tr>
         </thead>
