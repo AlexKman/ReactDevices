@@ -14,7 +14,7 @@ https://pzv500llz9.execute-api.eu-west-2.amazonaws.com/production/device/{Device
 
 To run this application simply
 
-- Download this repository
+- Clone/Download this repository
 - Run npm install
 - Run npm run dev
 - Open your web browser at http://localhost:5173/
